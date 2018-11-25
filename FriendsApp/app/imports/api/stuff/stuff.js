@@ -9,8 +9,8 @@ export const Stuff = new Mongo.Collection('Stuff');
  * Create the schema for Stuff
  */
 export const StuffSchema = new SimpleSchema({
-  name: {
-    label: 'Name',
+  firstname: {
+    label: 'First',
     type: String,
     optional: false,
     max: 20,
@@ -19,13 +19,43 @@ export const StuffSchema = new SimpleSchema({
       placeholder: 'Bicycle',
     },
   },
-  quantity: {
-    label: 'Quantity',
-    type: Number,
+  lastname: {
+    label: 'Last',
+    type: String,
     optional: false,
     autoform: {
       group: 'Stuff',
-      placeholder: '3',
+      placeholder: 'Smith',
+    },
+  },
+  Address: {
+    label: 'Address',
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: 'Stuff',
+      placeholder: '123 Pine St',
+    },
+  },
+  Phone: {
+    label: 'Phone',
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: 'Stuff',
+      placeholder: '555-555-5555',
+    },
+  },
+  Email: {
+    label: 'Email',
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: 'Stuff',
+      placeholder: 'gomble@gmail.com',
     },
   },
 });

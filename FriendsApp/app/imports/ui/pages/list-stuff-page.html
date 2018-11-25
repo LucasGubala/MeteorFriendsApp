@@ -5,17 +5,24 @@
         <table style="margin-top: 20px" class="ui celled table">
           <thead>
           <tr>
-            <th>Name</th>
-            <th>Quantity</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
             <th>Edit</th>
+
           </tr>
           </thead>
 
           <tbody>
           {{#each stuff in stuffList}}
             <tr>
-              <td>{{stuff.name}}</td>
-              <td>{{stuff.quantity}}</td>
+              <td>{{stuff.firstname}}</td>
+              <td>{{stuff.lastname}}</td>
+              <td>{{stuff.Address}}</td>
+              <td>{{stuff.Phone}}</td>
+              <td>{{stuff.Email}}</td>
               <td><a href="{{pathFor 'Edit_Stuff_Page' _id=stuff._id}}">Edit</a></td>
             </tr>
           {{/each}}
