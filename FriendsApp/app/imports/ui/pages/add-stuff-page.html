@@ -1,12 +1,30 @@
 <template name="Add_Stuff_Page">
   {{#If_Logged_In}}
-    <div style="padding-top: 20px" class="ui text container">
+   <!-- <div style="padding-top: 20px" class="ui text container">
       {{> quickForm
       collection=stuffCollection
       template="semanticUI"
       id="AddStuffForm"
       type="insert"
       resetOnSuccess=true}}
+    </div>-->
+<h1>
+  Add Contact
+</h1>
+  <div class="ui divider"></div>
+
+  <div class="ui equal width form">
+    <div class="two fields">
+      <div class="required field">
+        <label>First name</label>
+        <input type="text" placeholder="First Name">
+      </div>
+      <div class="required field">
+        <label>Last name</label>
+        <input type="text" placeholder="Last Name">
+      </div>
     </div>
+  </div>
+
   {{/If_Logged_In}}
 </template>
