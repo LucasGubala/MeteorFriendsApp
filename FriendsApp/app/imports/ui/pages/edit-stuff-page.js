@@ -22,6 +22,28 @@ AutoForm.hooks({
   },
 });
 
+Template.Edit_Stuff_Page.events({
+  'submit .update-contact': function (event) {
+    const firstname = event.target.firstname.value;
+    const lastname = event.target.lastname.value;
+    const Address = event.target.Address.value;
+    const Phone = event.target.Phone.value;
+    const Email = event.target.Email.value;
+
+    const ID = FlowRouter.getParam('_id');
+    Stuff.remove(ID);
+
+    Stuff.insert({
+      firstname: firstname,
+      lastname: lastname,
+      Address: Address,
+      Phone: Phone,
+      Email: Email,
+    });
+    FlowRouter.go('Home_Page');
+  },
+});
+
 Template.Edit_Stuff_Page.helpers({
   getDoc() {
     return Stuff.findOne(FlowRouter.getParam('_id'));

@@ -22,6 +22,25 @@ AutoForm.hooks({
   },
 });
 
+Template.Add_Stuff_Page.events({
+  'submit .new-contact': function (event) {
+    const firstname = event.target.firstname.value;
+    const lastname = event.target.lastname.value;
+    const Address = event.target.Address.value;
+    const Phone = event.target.Phone.value;
+    const Email = event.target.Email.value;
+
+    Stuff.insert({
+      firstname: firstname,
+      lastname: lastname,
+      Address: Address,
+      Phone: Phone,
+      Email: Email,
+    });
+  },
+});
+
+
 Template.Add_Stuff_Page.helpers({
   stuffCollection() {
     return Stuff;

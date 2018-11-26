@@ -15,4 +15,8 @@ body {
 .login-link-text {
   color: white;
 }
+.ui.equal.width.form {
+  padding-right: 360px;
+  padding-left: 360px;
+}
 

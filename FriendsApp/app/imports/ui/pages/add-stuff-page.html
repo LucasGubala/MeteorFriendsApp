@@ -8,23 +8,40 @@
       type="insert"
       resetOnSuccess=true}}
     </div>-->
-<h1>
+<h1 style="padding-left: 360px">
   Add Contact
 </h1>
   <div class="ui divider"></div>
-
+<form class="new-contact">
   <div class="ui equal width form">
     <div class="two fields">
       <div class="required field">
         <label>First name</label>
-        <input type="text" placeholder="First Name">
+        <input type="text" name="firstname" placeholder="First Name">
       </div>
       <div class="required field">
         <label>Last name</label>
-        <input type="text" placeholder="Last Name">
+        <input type="text" name="lastname" placeholder="Last Name">
       </div>
     </div>
+    <div class="required field">
+      <label>Address</label>
+      <input type="text" name="Address" placeholder="Address">
+    </div>
+
+    <div class="two fields">
+      <div class="required field">
+        <label>Phone</label>
+        <input type="text" name="Phone" placeholder="555-555-5555">
+      </div>
+      <div class="required field">
+        <label>Email</label>
+        <input type="text" name="Email" placeholder="meta@gonk.net">
+      </div>
+    </div>
+    <input type="submit" value="Submit">
   </div>
+</form>
 
   {{/If_Logged_In}}
 </template>
